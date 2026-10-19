@@ -1,0 +1,56 @@
+# IntelliJ / Android Studio
+*.iml
+.idea/
+!.idea/codeStyles
+!.idea/inspectionProfiles
+
+# Gradle
+.gradle/
+build/
+**/build/
+
+# Local config
+local.properties
+
+# Signing keys and their passwords (see keystore.properties.example)
+*.jks
+*.keystore
+keystore.properties
+
+# Native build
+.externalNativeBuild/
+.cxx/
+
+# Captures
+captures/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Release artifacts
+app/release/
+
+# Python
+__pycache__/
+
+# Builds, keys and secrets that must never be published
+*.apk
+*.aab
+*.hprof
+*.pem
+*.p12
+.env*
+google-services.json
+GoogleService-Info.plist
+*service-account*.json
+replay_pid*
+hs_err_pid*
+
+# Local assistant settings and private notes
+.claude/
+AUDIT.md
+RELEASE_*.md
