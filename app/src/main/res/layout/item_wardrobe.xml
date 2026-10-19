@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Вещь в гардеробе: картинка и название. Закрытая — с замочком и бледнее. -->
+<com.example.pixelpetwidget.ui.pixel.PixelCard xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/px_gap">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/px_wardrobe_image">
+
+        <ImageView
+            android:id="@+id/item_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:importantForAccessibility="no" />
+
+        <ImageView
+            android:id="@+id/item_lock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:importantForAccessibility="no"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <com.example.pixelpetwidget.ui.pixel.PixelLabel
+        android:id="@+id/item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_stroke"
+        android:gravity="center"
+        app:pixelText="hint" />
+</com.example.pixelpetwidget.ui.pixel.PixelCard>

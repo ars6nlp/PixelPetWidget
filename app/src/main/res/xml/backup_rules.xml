@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Backup rules for Android 11 and lower.
+     Widget settings are keyed by appWidgetId, which is different on every device,
+     so restoring them would only leave stale entries. -->
+<full-backup-content>
+    <exclude domain="sharedpref" path="PixelCatWidgetPrefs.xml" />
+</full-backup-content>

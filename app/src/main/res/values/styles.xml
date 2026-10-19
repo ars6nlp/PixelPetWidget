@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Рамка виджета (на Android 12+ своя, в values-v31) -->
+    <style name="Widget.PixelPet.Container" parent="android:Widget" />
+</resources>

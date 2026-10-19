@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Экраны приложения. Цвета, шрифт и размеры задаёт ui/theme/PixelTheme.java;
+         светлая или тёмная — как в системе. Виджет эту тему не использует. -->
+    <style name="Theme.PixelPetWidget" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+    </style>
+
+    <!-- PixelDialog: прозрачное окно на весь экран, затемнение и карточку рисует сам диалог -->
+    <style name="Theme.PixelPetWidget.Dialog" parent="Theme.PixelPetWidget">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+</resources>

@@ -1,0 +1,144 @@
+<resources>
+    <string name="widget_description">Анимированный пиксельный питомец на рабочем столе</string>
+    <string name="widget_tap_hint">Пиксельный питомец. Нажмите, чтобы сменить занятие</string>
+    <string name="max_widgets_reached">Максимально можно добавить только 5 виджетов!</string>
+
+    <!-- Main Activity -->
+    <string name="section_pets">Выбери друга</string>
+    <string name="preview_description">Предпросмотр: %1$s на выбранном фоне</string>
+
+    <!-- Pet names -->
+
+    <!-- Pet descriptions -->
+    <string name="pet_cat_desc">Милый и ласковый</string>
+    <string name="pet_dog_desc">Верный и веселый</string>
+    <string name="pet_rabbit_desc">Пушистый и милый</string>
+    <string name="pet_panda_desc">Сонная и спокойная</string>
+    <string name="pet_hamster_desc">Шустрый и запасливый</string>
+    <string name="pet_capybara_desc">Невозмутимая и добрая</string>
+    <string name="pet_parrot_desc">Яркий и болтливый</string>
+    <string name="pet_aquarium_desc">Тихий и уютный</string>
+    <string name="pet_kitten_desc">Игривый и любопытный</string>
+    <string name="pet_puppy_desc">Весёлый и добрый</string>
+
+    <!-- Background -->
+    <string name="choose_bg">Фон</string>
+    <string name="bg_option_1">Фон 1</string>
+    <string name="bg_option_2">Фон 2</string>
+    <string name="bg_option_3">Фон 3</string>
+    <string name="bg_maple_park">КЛЁНОВЫЙ ПАРК</string>
+    <string name="bg_rainy_evening">ДОЖДЛИВЫЙ ВЕЧЕР</string>
+    <string name="bg_picker_title">Фон этого виджета</string>
+    <string name="bg_picker_scene">У аквариума своя сцена, фон ему не нужен.</string>
+    <string name="bg_pumpkin_field">ТЫКВЕННОЕ ПОЛЕ</string>
+
+    <!-- Button -->
+    <string name="add_friend_button">Добавить на экран</string>
+
+    <!-- Dialog -->
+    <string name="pet_name_cat">Котик</string>
+    <string name="pet_name_dog">Песик</string>
+    <string name="pet_name_rabbit">Зайчик</string>
+    <string name="pet_name_panda">Панда</string>
+    <string name="pet_name_hamster">Хомячок</string>
+    <string name="pet_name_capybara">Капибара</string>
+    <string name="pet_name_parrot">Попугай</string>
+    <string name="pet_name_aquarium">Аквариум</string>
+    <string name="pet_name_kitten">Котёнок</string>
+    <string name="pet_name_puppy">Щенок</string>
+    <string name="dialog_title_format">%1$s готов!</string>
+    <string name="dialog_message_format">На этом рабочем столе виджет добавляется вручную:
+
+1. Нажми и удерживай пустое место
+2. Выбери «Виджеты»
+3. Найди Pixel Pet
+4. Перетащи на экран
+
+В новых виджетах будет %1$s. Те, что уже есть, не изменятся.</string>
+    <string name="dialog_ok">Понятно</string>
+
+    <!-- Language -->
+    <!-- Care -->
+    <string name="care_food_description">Сытость %1$d из 100</string>
+    <string name="care_joy_description">Настроение %1$d из 100</string>
+    <string name="care_add_hint">Добавь на экран, чтобы ухаживать</string>
+    <string name="feed_done">Ням!</string>
+    <string name="feed_full">Сейчас не хочет есть</string>
+    <string name="feed_no_treats">Лакомства закончились. Новые будут в завтрашнем подарке</string>
+    <string name="stroke_enough">На сегодня вдоволь наглажено</string>
+    <string name="stroke_hint">%1$s. Нажми, чтобы погладить</string>
+    <string name="need_hungry_description">%1$s хочет есть. Нажми, чтобы покормить</string>
+    <string name="need_lonely_description">%1$s скучает. Нажми, чтобы заглянуть</string>
+
+    <!-- Daily gift -->
+    <string name="gift_title">Подарок дня</string>
+    <string name="gift_freezes_description">Заморозки серии: %1$d</string>
+    <string name="gift_claim">Забрать ×%1$d</string>
+    <string name="gift_come_back">Новый подарок будет завтра</string>
+    <string name="gift_freeze_used">Заморозка сохранила серию</string>
+    <string name="gift_freeze_earned">+1 заморозка серии</string>
+    <string name="gift_welcome_back">Питомцы скучали! Держи бонус</string>
+    <string name="gift_streak_reset">Начинается новая серия</string>
+
+    <!-- Wardrobe -->
+    <string name="wardrobe_title">Гардероб</string>
+    <string name="wardrobe_none">Ничего</string>
+    <string name="wardrobe_pick_up">Забрать</string>
+    <string name="wardrobe_locked">%1$s: %2$s</string>
+    <string name="wardrobe_new_item">Новое в гардеробе: %1$s</string>
+    <string name="item_bow">Бантик</string>
+    <string name="item_halloween_hat">Шляпа к Хэллоуину</string>
+    <string name="item_winter_hat">Новогодний колпак</string>
+    <string name="item_bow_hint">7 дней подряд</string>
+    <string name="item_halloween_hint">Хэллоуин, 15 окт – 10 нояб</string>
+    <string name="item_winter_hint">Зимние праздники, 15 дек – 10 янв</string>
+    <string name="season_halloween">Хэллоуин в саду до 10 ноября</string>
+    <string name="season_winter">Зимние праздники до 10 января</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Настройки</string>
+    <string name="settings_reminders">Напоминание в 19:00</string>
+    <string name="settings_reminders_hint">Только если ждёт подарок или голодный питомец</string>
+    <string name="settings_night">Ночной режим на виджете</string>
+    <string name="settings_night_hint">С 22:00 до 7:00 питомцы спят, виджет темнеет</string>
+    <string name="settings_seasonal">Сезонное оформление</string>
+    <string name="settings_seasonal_hint">Тыквы на Хэллоуин, снег зимой</string>
+    <string name="reminders_denied">Разреши уведомления в настройках системы, чтобы получать напоминания</string>
+    <string name="reminder_offer_title">Напоминать о питомце?</string>
+    <string name="reminder_offer_text">Раз в день в 19:00 — и только если ждёт подарок или голодный питомец.</string>
+    <string name="reminder_offer_yes">Напоминать</string>
+    <string name="reminder_offer_no">Не сейчас</string>
+
+    <!-- Reminder notification -->
+    <string name="reminder_channel">Напоминания о питомцах</string>
+    <string name="reminder_channel_description">Одно напоминание в день, если ждёт подарок или голодный питомец</string>
+    <string name="reminder_gift_title">Подарок дня ждёт 🎁</string>
+    <string name="reminder_gift_text">Загляни за лакомствами</string>
+    <string name="reminder_hungry_title">%1$s %2$s ждёт угощение</string>
+    <string name="reminder_hungry_text">Покорми — и облачко на виджете исчезнет</string>
+
+    <!-- Pixel interface -->
+    <string name="stroke_done">Ура!</string>
+    <string name="widget_added">Друг уже на рабочем столе!</string>
+    <string name="back">Назад</string>
+    <string name="close">Закрыть</string>
+    <string name="wardrobe_locked_badge">Закрыто</string>
+    <string name="settings_sound">Звуки</string>
+    <string name="settings_sound_hint">Кнопки, переключатели и голоса питомцев</string>
+    <string name="settings_language">Язык</string>
+    <string name="about_button">О приложении</string>
+    <string name="about_text">Версия %1$s\n\nУютные пиксельные питомцы для рабочего стола. Питомцы, интерфейс и звуки нарисованы и созданы для этого приложения.\n\nШрифт: Tiny5, автор Stefan Schmidt, лицензия SIL Open Font License 1.1.</string>
+    <string name="about_licence">Лицензия шрифта</string>
+    <string name="privacy_policy">Политика конфиденциальности</string>
+    <string name="ad_privacy_button">Выбор конфиденциальности рекламы</string>
+    <string name="no_browser">На устройстве нет браузера, чтобы открыть страницу.</string>
+    <string name="max_widgets_title">На экране уже много друзей</string>
+
+    <!-- Main screen -->
+    <string name="care_food">Сытость</string>
+    <string name="care_joy">Радость</string>
+    <string name="care_stroke_hint">Нажми на питомца, чтобы погладить</string>
+    <string name="feed_button_count">Покормить · лакомств: %1$d</string>
+    <string name="gift_status">Дней подряд: %1$d · лакомств: %2$d</string>
+    <string name="settings_volume_level">Громкость: %1$d из %2$d</string>
+</resources>

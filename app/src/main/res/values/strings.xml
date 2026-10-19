@@ -1,0 +1,165 @@
+<resources>
+    <string name="app_name" translatable="false">Pixel Pet</string>
+    <string name="widget_label" translatable="false">Pixel Pet</string>
+    <string name="widget_description">An animated pixel pet that lives on your home screen</string>
+    <string name="widget_tap_hint">Pixel pet. Tap to change what it is doing</string>
+    <string name="max_widgets_reached">You can add a maximum of 5 widgets!</string>
+
+    <!-- Main Activity -->
+    <string name="app_title" translatable="false">Pixel Pet</string>
+    <string name="section_pets">Pick a friend</string>
+    <string name="preview_description">Preview: %1$s on the chosen background</string>
+
+    <!-- Pet names -->
+
+    <!-- Decorative emoji on the pet cards -->
+    <string name="pet_cat_emoji" translatable="false">❤️</string>
+    <string name="pet_dog_emoji" translatable="false">🦴</string>
+    <string name="pet_rabbit_emoji" translatable="false">🥕</string>
+    <string name="pet_panda_emoji" translatable="false">🎋</string>
+    <string name="pet_hamster_emoji" translatable="false">🌻</string>
+    <string name="pet_capybara_emoji" translatable="false">🌿</string>
+    <string name="pet_parrot_emoji" translatable="false">🦜</string>
+    <string name="pet_aquarium_emoji" translatable="false">🐠</string>
+    <string name="pet_puppy_emoji" translatable="false">🐶</string>
+    <string name="pet_kitten_emoji" translatable="false">🐱</string>
+
+    <!-- Pet descriptions -->
+    <string name="pet_cat_desc">Sweet and cuddly</string>
+    <string name="pet_dog_desc">Loyal and playful</string>
+    <string name="pet_rabbit_desc">Fluffy and cute</string>
+    <string name="pet_panda_desc">Sleepy and chill</string>
+    <string name="pet_hamster_desc">Quick and thrifty</string>
+    <string name="pet_capybara_desc">Calm and friendly</string>
+    <string name="pet_parrot_desc">Bright and chatty</string>
+    <string name="pet_aquarium_desc">Calm and cozy</string>
+    <string name="pet_kitten_desc">Curious and playful</string>
+    <string name="pet_puppy_desc">Playful and kind</string>
+
+    <!-- Background -->
+    <string name="choose_bg">Background</string>
+    <string name="bg_option_1">Background 1</string>
+    <string name="bg_option_2">Background 2</string>
+    <string name="bg_option_3">Background 3</string>
+    <string name="bg_maple_park">MAPLE PARK</string>
+    <string name="bg_rainy_evening">RAINY EVENING</string>
+    <string name="bg_picker_title">Background of this widget</string>
+    <string name="bg_picker_scene">The aquarium is a scene of its own and needs no background.</string>
+    <string name="bg_pumpkin_field">PUMPKIN FIELD</string>
+
+    <!-- Button -->
+    <string name="add_friend_button">Add to home screen</string>
+
+    <!-- Dialog -->
+    <string name="pet_name_cat">Kitty</string>
+    <string name="pet_name_dog">Doggy</string>
+    <string name="pet_name_rabbit">Bunny</string>
+    <string name="pet_name_panda">Panda</string>
+    <string name="pet_name_hamster">Hammy</string>
+    <string name="pet_name_capybara">Capybara</string>
+    <string name="pet_name_parrot">Parrot</string>
+    <string name="pet_name_aquarium">Aquarium</string>
+    <string name="pet_name_kitten">Kitten</string>
+    <string name="pet_name_puppy">Puppy</string>
+    <string name="dialog_title_format">%1$s is ready!</string>
+    <string name="dialog_message_format">Your launcher adds widgets by hand:
+
+1. Touch and hold an empty spot
+2. Choose Widgets
+3. Find Pixel Pet
+4. Drag it to the screen
+
+New widgets get %1$s. The ones you have stay the same.</string>
+    <string name="dialog_ok">Got it</string>
+
+    <!-- Language -->
+    <string name="lang_ru_description" translatable="false">Русский</string>
+    <string name="lang_en_description" translatable="false">English</string>
+    <!-- Care -->
+    <string name="care_food_description">Food %1$d of 100</string>
+    <string name="care_joy_description">Mood %1$d of 100</string>
+    <string name="care_add_hint">Add it to the home screen to take care of it</string>
+    <string name="feed_done">Yum!</string>
+    <string name="feed_full">Not hungry right now</string>
+    <string name="feed_no_treats">Out of treats. New ones come with tomorrow\'s gift</string>
+    <string name="stroke_enough">Plenty of cuddles for today</string>
+    <string name="stroke_hint">%1$s. Tap to stroke</string>
+    <string name="need_hungry_description">%1$s is hungry. Tap to feed</string>
+    <string name="need_lonely_description">%1$s misses you. Tap to visit</string>
+
+    <!-- Daily gift -->
+    <string name="gift_title">Daily gift</string>
+    <string name="gift_freezes_description">Streak freezes: %1$d</string>
+    <string name="gift_claim">Claim ×%1$d</string>
+    <string name="gift_come_back">A new gift tomorrow</string>
+    <string name="gift_received" translatable="false">+%1$d</string>
+    <string name="gift_freeze_used">A freeze kept your streak</string>
+    <string name="gift_freeze_earned">+1 streak freeze</string>
+    <string name="gift_welcome_back">Your pets missed you! Bonus treats</string>
+    <string name="gift_streak_reset">A new streak begins</string>
+
+    <!-- Wardrobe -->
+    <string name="wardrobe_title">Wardrobe</string>
+    <string name="wardrobe_none">Nothing</string>
+    <string name="wardrobe_pick_up">Get it</string>
+    <string name="wardrobe_locked">%1$s: %2$s</string>
+    <string name="wardrobe_new_item">New in the wardrobe: %1$s</string>
+    <string name="item_bow">Bow</string>
+    <string name="item_halloween_hat">Halloween hat</string>
+    <string name="item_winter_hat">Santa hat</string>
+    <string name="item_bow_hint">7 days in a row</string>
+    <string name="item_halloween_hint">Halloween, Oct 15 – Nov 10</string>
+    <string name="item_winter_hint">Winter holidays, Dec 15 – Jan 10</string>
+    <string name="season_halloween">Halloween in the garden until Nov 10</string>
+    <string name="season_winter">Winter holidays until Jan 10</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_reminders">Daily reminder at 19:00</string>
+    <string name="settings_reminders_hint">Only when a gift or a hungry pet is waiting</string>
+    <string name="settings_night">Night mode on the widget</string>
+    <string name="settings_night_hint">From 22:00 to 7:00 pets sleep and the widget dims</string>
+    <string name="settings_seasonal">Seasonal decorations</string>
+    <string name="settings_seasonal_hint">Pumpkins for Halloween, snow in winter</string>
+    <string name="reminders_denied">Allow notifications in the system settings to get reminders</string>
+    <string name="reminder_offer_title">Remind you about your pet?</string>
+    <string name="reminder_offer_text">Once a day at 19:00, and only if a gift or a hungry pet is waiting.</string>
+    <string name="reminder_offer_yes">Remind me</string>
+    <string name="reminder_offer_no">Not now</string>
+
+    <!-- Reminder notification -->
+    <string name="reminder_channel">Pet reminders</string>
+    <string name="reminder_channel_description">One reminder a day when a gift or a hungry pet is waiting</string>
+    <string name="reminder_gift_title">Your daily gift is waiting 🎁</string>
+    <string name="reminder_gift_text">Drop by for treats</string>
+    <string name="reminder_hungry_title">%1$s %2$s is waiting for a treat</string>
+    <string name="reminder_hungry_text">Feed it and the bubble on the widget goes away</string>
+    <string name="licence_title" translatable="false">SIL Open Font License 1.1</string>
+
+    <!-- Pixel interface -->
+    <string name="stroke_done">Yay!</string>
+    <string name="widget_added">Your friend is on the home screen!</string>
+    <string name="back">Back</string>
+    <string name="close">Close</string>
+    <string name="wardrobe_locked_badge">Locked</string>
+    <string name="settings_sound">Sounds</string>
+    <string name="settings_sound_hint">Buttons, switches and pet voices</string>
+    <string name="settings_language">Language</string>
+    <string name="about_button">About the app</string>
+    <string name="about_text">Version %1$s\n\nCozy pixel pets for your home screen. Pets, interface and sounds are drawn and made for this app.\n\nFont: Tiny5 by Stefan Schmidt, SIL Open Font License 1.1.</string>
+    <string name="about_licence">Font licence</string>
+    <!-- The privacy policy's web address: the one place to put it. Empty: the About box has no button for it -->
+    <string name="privacy_policy_url" translatable="false"></string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="ad_privacy_button">Ad privacy choices</string>
+    <string name="no_browser">There is no browser on this device to open the page.</string>
+    <string name="max_widgets_title">The home screen is full of friends</string>
+
+    <!-- Main screen -->
+    <string name="care_food">Food</string>
+    <string name="care_joy">Mood</string>
+    <string name="care_stroke_hint">Tap your pet to stroke it</string>
+    <string name="feed_button_count">Feed · treats: %1$d</string>
+    <string name="gift_status">Days in a row: %1$d · treats: %2$d</string>
+    <string name="settings_volume_level">Volume: %1$d of %2$d</string>
+</resources>

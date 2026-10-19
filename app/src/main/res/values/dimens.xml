@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Все размеры экранов приложения. Цвета и шрифт — в ui/theme/PixelTheme.java. -->
+
+    <!-- Толщина обводки. Она же — «пиксель» иконок и ступенька срезанного угла -->
+    <dimen name="px_stroke">2dp</dimen>
+    <!-- Наименьший размер кнопки, переключателя и карточки под палец -->
+    <dimen name="px_touch">48dp</dimen>
+    <!-- Отступы -->
+    <dimen name="px_screen_padding">16dp</dimen>
+    <dimen name="px_card_padding">12dp</dimen>
+    <dimen name="px_gap">8dp</dimen>
+    <dimen name="px_section_gap">24dp</dimen>
+    <!-- Шире не растягиваем: планшеты и поворот экрана -->
+    <dimen name="px_max_content_width">560dp</dimen>
+
+    <!-- Текст (Tiny5 округляется до чёткого размера) -->
+    <dimen name="px_text_title">21.33sp</dimen>
+    <dimen name="px_text_body">16sp</dimen>
+    <dimen name="px_text_hint">13.33sp</dimen>
+
+    <!-- Картинки на экранах -->
+    <dimen name="px_pet_card_image">80dp</dimen>
+    <dimen name="px_background_card">72dp</dimen>
+    <dimen name="px_wardrobe_image">48dp</dimen>
+    <dimen name="px_care_bar_width">80dp</dimen>
+    <dimen name="px_care_bar_height">12dp</dimen>
+
+    <!-- Виджет: внутренний отступ; PixelCatWidget ставит питомца внутри него -->
+    <dimen name="widget_frame_padding">4dp</dimen>
+</resources>

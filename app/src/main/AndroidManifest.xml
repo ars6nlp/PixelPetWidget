@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- Optional daily reminder; asked for only when the player turns it on -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher_custom"
+        android:label="@string/app_name"
+        android:localeConfig="@xml/locales_config"
+        android:roundIcon="@mipmap/ic_launcher_custom"
+        android:supportsRtl="true"
+        android:forceDarkAllowed="false"
+        android:theme="@style/Theme.PixelPetWidget">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-1611801616996597~7785026832"/>
+
+        <!-- Main Activity -->
+        <activity
+            android:name=".MainActivitySimple"
+            android:exported="true"
+            android:theme="@style/Theme.PixelPetWidget">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Widget Configuration Activity -->
+        <!-- No UI: copies the pet chosen in the app to the new widget and finishes -->
+        <activity
+            android:name=".WidgetConfigActivity"
+            android:exported="true"
+            android:label="@string/widget_label"
+            android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <!-- Background of a widget already on the home screen (opened by WidgetConfigActivity) -->
+        <activity
+            android:name=".BackgroundPickerActivity"
+            android:exported="false"
+            android:label="@string/bg_picker_title"
+            android:taskAffinity=""
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.PixelPetWidget" />
+
+        <!-- Pixel Cat Widget -->
+        <receiver
+            android:name=".PixelCatWidget"
+            android:label="@string/widget_label"
+            android:exported="true"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/pixel_cat_widget_info" />
+        </receiver>
+
+        <!-- Puts the pets to sleep after a reboot, an app update or a clock change -->
+        <receiver
+            android:name=".RestartReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <!-- Daily reminder about a waiting gift or a hungry pet -->
+        <receiver
+            android:name=".ReminderReceiver"
+            android:exported="false" />
+    </application>
+
+</manifest>

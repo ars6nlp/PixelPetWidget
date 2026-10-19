@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Атрибуты пиксельных компонентов (ui/pixel) -->
+    <declare-styleable name="PixelButton">
+        <!-- Основная (акцентная) или второстепенная кнопка -->
+        <attr name="pixelVariant" format="enum">
+            <enum name="primary" value="0" />
+            <enum name="secondary" value="1" />
+        </attr>
+        <!-- Пиксельная иконка из res/drawable-nodpi (ic_px_*) -->
+        <attr name="pixelIcon" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="PixelLabel">
+        <!-- Заголовок, обычный текст или подсказка -->
+        <attr name="pixelText" format="enum">
+            <enum name="title" value="0" />
+            <enum name="body" value="1" />
+            <enum name="hint" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

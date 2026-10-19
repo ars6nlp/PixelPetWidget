@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Только виджет и уведомления. Цвета экранов приложения — в ui/theme/PixelTheme.java -->
+    <color name="garden_accent">#D36135</color> <!-- Terracotta -->
+    <color name="night_tint">#5A101830</color>
+</resources>

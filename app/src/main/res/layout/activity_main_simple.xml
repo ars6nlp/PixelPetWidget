@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Главный экран: превью питомца, «Добавить на экран», выбор питомца, фон, гардероб, подарок.
+     Настройки (page_settings) открываются поверх него. Баннер рекламы — внизу, как раньше. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/main_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Верхняя панель -->
+            <LinearLayout
+                android:id="@+id/main_top_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/px_screen_padding"
+                android:paddingVertical="@dimen/px_gap">
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:importantForAccessibility="no" />
+
+                <com.example.pixelpetwidget.ui.pixel.PixelLabel
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/px_gap"
+                    android:layout_weight="1"
+                    android:text="@string/app_title"
+                    app:pixelText="title" />
+
+                <com.example.pixelpetwidget.ui.pixel.PixelButton
+                    android:id="@+id/settings_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/settings_title"
+                    app:pixelIcon="@drawable/ic_px_settings"
+                    app:pixelVariant="secondary" />
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never">
+
+                <LinearLayout
+                    android:id="@+id/main_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/px_screen_padding"
+                    android:paddingBottom="@dimen/px_screen_padding">
+
+                    <!-- Превью: выбранный питомец на выбранном фоне, в пиксельной рамке. Нажатие гладит питомца. -->
+                    <FrameLayout
+                        android:id="@+id/preview_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/preview_background"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:importantForAccessibility="no"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:id="@+id/preview_pet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:layout_marginBottom="@dimen/px_gap"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:scaleType="fitCenter"
+                            tools:ignore="ContentDescription" />
+
+                        <!-- Сытость и радость питомца, который живёт на рабочем столе -->
+                        <com.example.pixelpetwidget.ui.pixel.PixelCard
+                            android:id="@+id/care_panel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|start"
+                            android:layout_margin="@dimen/px_gap"
+                            android:orientation="vertical"
+                            android:padding="@dimen/px_gap"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <com.example.pixelpetwidget.ui.pixel.PixelLabel
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:importantForAccessibility="no"
+                                    android:text="@string/care_food"
+                                    app:pixelText="hint" />
+
+                                <View
+                                    android:id="@+id/care_food_bar"
+                                    android:layout_width="@dimen/px_care_bar_width"
+                                    android:layout_height="@dimen/px_care_bar_height"
+                                    android:layout_marginStart="@dimen/px_gap" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/px_stroke"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <com.example.pixelpetwidget.ui.pixel.PixelLabel
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:importantForAccessibility="no"
+                                    android:text="@string/care_joy"
+                                    app:pixelText="hint" />
+
+                                <View
+                                    android:id="@+id/care_joy_bar"
+                                    android:layout_width="@dimen/px_care_bar_width"
+                                    android:layout_height="@dimen/px_care_bar_height"
+                                    android:layout_marginStart="@dimen/px_gap" />
+                            </LinearLayout>
+                        </com.example.pixelpetwidget.ui.pixel.PixelCard>
+                    </FrameLayout>
+
+                    <!-- Подсказка или ответ питомца -->
+                    <com.example.pixelpetwidget.ui.pixel.PixelLabel
+                        android:id="@+id/preview_hint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/px_gap"
+                        android:accessibilityLiveRegion="polite"
+                        android:gravity="center_horizontal"
+                        app:pixelText="hint" />
+
+                    <com.example.pixelpetwidget.ui.pixel.PixelButton
+                        android:id="@+id/add_widget_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/px_gap"
+                        android:text="@string/add_friend_button" />
+
+                    <com.example.pixelpetwidget.ui.pixel.PixelButton
+                        android:id="@+id/feed_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/px_gap"
+                        android:visibility="gone"
+                        app:pixelVariant="secondary" />
+
+                    <!-- Питомцы -->
+                    <com.example.pixelpetwidget.ui.pixel.PixelLabel
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/px_section_gap"
+                        android:layout_marginBottom="@dimen/px_gap"
+                        android:text="@string/section_pets"
+                        app:pixelText="title" />
+
+                    <GridLayout
+                        android:id="@+id/pet_grid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:columnCount="2" />
+
+                    <!-- Фон виджета (у аквариума своего фона нет: он сам сцена) -->
+                    <include
+                        android:id="@+id/bg_cards"
+                        layout="@layout/part_bg_cards"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/px_section_gap" />
+
+                    <!-- Гардероб (только у пиксельных питомцев) -->
+                    <LinearLayout
+                        android:id="@+id/wardrobe_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.example.pixelpetwidget.ui.pixel.PixelLabel
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/px_section_gap"
+                            android:text="@string/wardrobe_title"
+                            app:pixelText="title" />
+
+                        <com.example.pixelpetwidget.ui.pixel.PixelLabel
+                            android:id="@+id/wardrobe_season"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            app:pixelText="hint" />
+
+                        <LinearLayout
+                            android:id="@+id/wardrobe_items"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/px_gap"
+                            android:baselineAligned="false"
+                            android:orientation="horizontal" />
+
+                        <!-- Новая вещь или как её получить -->
+                        <com.example.pixelpetwidget.ui.pixel.PixelLabel
+                            android:id="@+id/wardrobe_message"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/px_gap"
+                            android:accessibilityLiveRegion="polite"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <!-- Подарок дня -->
+                    <com.example.pixelpetwidget.ui.pixel.PixelCard
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/px_section_gap"
+                        android:orientation="vertical">
+
+                        <com.example.pixelpetwidget.ui.pixel.PixelLabel
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/gift_title"
+                            app:pixelText="title" />
+
+                        <com.example.pixelpetwidget.ui.pixel.PixelLabel
+                            android:id="@+id/gift_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/px_stroke"
+                            app:pixelText="hint" />
+
+                        <com.example.pixelpetwidget.ui.pixel.PixelLabel
+                            android:id="@+id/gift_result"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/px_stroke"
+                            android:accessibilityLiveRegion="polite"
+                            android:visibility="gone" />
+
+                        <com.example.pixelpetwidget.ui.pixel.PixelButton
+                            android:id="@+id/gift_claim_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/px_gap" />
+
+                        <com.example.pixelpetwidget.ui.pixel.PixelLabel
+                            android:id="@+id/gift_waiting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/px_gap"
+                            android:text="@string/gift_come_back" />
+                    </com.example.pixelpetwidget.ui.pixel.PixelCard>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <include layout="@layout/page_settings" />
+    </FrameLayout>
+
+    <!-- Нижний рекламный баннер AdMob -->
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-1611801616996597/4751669382" />
+
+</LinearLayout>

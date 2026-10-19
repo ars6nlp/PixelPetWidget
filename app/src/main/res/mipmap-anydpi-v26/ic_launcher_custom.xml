@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@mipmap/ic_launcher_custom_img" />
+    <foreground>
+        <!-- We use an inset to slightly "zoom" or position the foreground if needed, 
+             but here we just want the background to be the main image to fill the space -->
+        <inset android:drawable="@android:color/transparent" />
+    </foreground>
+</adaptive-icon>

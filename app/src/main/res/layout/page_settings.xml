@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Настройки: звук, громкость, питомцы на виджете, язык, о приложении. Открываются поверх
+     главного экрана, «Назад» возвращает. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/settings_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:id="@+id/settings_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/px_screen_padding"
+        android:paddingVertical="@dimen/px_gap">
+
+        <com.example.pixelpetwidget.ui.pixel.PixelButton
+            android:id="@+id/settings_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/back"
+            app:pixelIcon="@drawable/ic_px_back"
+            app:pixelVariant="secondary" />
+
+        <com.example.pixelpetwidget.ui.pixel.PixelLabel
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px_card_padding"
+            android:layout_weight="1"
+            android:text="@string/settings_title"
+            app:pixelText="title" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:id="@+id/settings_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/px_screen_padding"
+            android:paddingBottom="@dimen/px_screen_padding">
+
+            <!-- Звук -->
+            <com.example.pixelpetwidget.ui.pixel.PixelCard
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.example.pixelpetwidget.ui.pixel.PixelLabel
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:labelFor="@+id/switch_sound"
+                            android:text="@string/settings_sound" />
+
+                        <com.example.pixelpetwidget.ui.pixel.PixelLabel
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_sound_hint"
+                            app:pixelText="hint" />
+                    </LinearLayout>
+
+                    <com.example.pixelpetwidget.ui.pixel.PixelSwitch
+                        android:id="@+id/switch_sound"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/px_gap"
+                        android:contentDescription="@string/settings_sound" />
+                </LinearLayout>
+
+                <com.example.pixelpetwidget.ui.pixel.PixelLabel
+                    android:id="@+id/volume_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px_card_padding"
+                    android:labelFor="@+id/volume_slider" />
+
+                <com.example.pixelpetwidget.ui.pixel.PixelSlider
+                    android:id="@+id/volume_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.example.pixelpetwidget.ui.pixel.PixelCard>
+
+            <!-- Питомцы на виджете -->
+            <com.example.pixelpetwidget.ui.pixel.PixelCard
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_section_gap"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.example.pixelpetwidget.ui.pixel.PixelLabel
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:labelFor="@+id/switch_reminders"
+                            android:text="@string/settings_reminders" />
+
+                        <com.example.pixelpetwidget.ui.pixel.PixelLabel
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_reminders_hint"
+                            app:pixelText="hint" />
+                    </LinearLayout>
+
+                    <com.example.pixelpetwidget.ui.pixel.PixelSwitch
+                        android:id="@+id/switch_reminders"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/px_gap"
+                        android:contentDescription="@string/settings_reminders" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px_card_padding"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.example.pixelpetwidget.ui.pixel.PixelLabel
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:labelFor="@+id/switch_night"
+                            android:text="@string/settings_night" />
+
+                        <com.example.pixelpetwidget.ui.pixel.PixelLabel
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_night_hint"
+                            app:pixelText="hint" />
+                    </LinearLayout>
+
+                    <com.example.pixelpetwidget.ui.pixel.PixelSwitch
+                        android:id="@+id/switch_night"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/px_gap"
+                        android:contentDescription="@string/settings_night" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px_card_padding"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.example.pixelpetwidget.ui.pixel.PixelLabel
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:labelFor="@+id/switch_seasonal"
+                            android:text="@string/settings_seasonal" />
+
+                        <com.example.pixelpetwidget.ui.pixel.PixelLabel
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_seasonal_hint"
+                            app:pixelText="hint" />
+                    </LinearLayout>
+
+                    <com.example.pixelpetwidget.ui.pixel.PixelSwitch
+                        android:id="@+id/switch_seasonal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/px_gap"
+                        android:contentDescription="@string/settings_seasonal" />
+                </LinearLayout>
+            </com.example.pixelpetwidget.ui.pixel.PixelCard>
+
+            <!-- Язык -->
+            <com.example.pixelpetwidget.ui.pixel.PixelLabel
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_section_gap"
+                android:layout_marginBottom="@dimen/px_gap"
+                android:text="@string/settings_language"
+                app:pixelText="title" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.example.pixelpetwidget.ui.pixel.PixelCard
+                    android:id="@+id/language_ru"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/px_gap"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:minHeight="@dimen/px_touch">
+
+                    <com.example.pixelpetwidget.ui.pixel.PixelLabel
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lang_ru_description" />
+                </com.example.pixelpetwidget.ui.pixel.PixelCard>
+
+                <com.example.pixelpetwidget.ui.pixel.PixelCard
+                    android:id="@+id/language_en"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:minHeight="@dimen/px_touch">
+
+                    <com.example.pixelpetwidget.ui.pixel.PixelLabel
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lang_en_description" />
+                </com.example.pixelpetwidget.ui.pixel.PixelCard>
+            </LinearLayout>
+
+            <com.example.pixelpetwidget.ui.pixel.PixelButton
+                android:id="@+id/about_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_section_gap"
+                android:text="@string/about_button"
+                app:pixelVariant="secondary" />
+
+            <!-- Shown only where the law asks for a way to change the consent to ads -->
+            <com.example.pixelpetwidget.ui.pixel.PixelButton
+                android:id="@+id/ad_privacy_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_gap"
+                android:text="@string/ad_privacy_button"
+                android:visibility="gone"
+                app:pixelVariant="secondary" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
