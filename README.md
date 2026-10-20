@@ -8,10 +8,13 @@
 ![Widget](https://img.shields.io/badge/Widget-Home%20Screen-important.svg)
 
 **Adorable animated pet widgets for Android home screens**
+
 Choose your companion: **Pixel Cat**  | **Pixel Dog** | **Pixel Rabbit** | **Pixel Panda** | **Pixel Hamster** | **Pixel Capybara** | **Pixel Parrot** | **Puppy** | **Kitten** | **Aquarium**
-[Features](#features) • [Installation](#installation) • [Screenshots](#screenshots) • [How it works](#how-it-works) • [Contributing](#contributing)
+
+[Features](#features) • [Installation](#installation) • [How it works](#how-it-works) • [Contributing](#contributing)
 
 </div>
+
 ---
 ## Features
 
@@ -32,8 +35,7 @@ Choose your companion: **Pixel Cat**  | **Pixel Dog** | **Pixel Rabbit** | **Pix
   - Puppy: Sleep → Jump for joy → Idle → Chew a bone → Chase its tail → Trot →
   - Kitten: Sleep → Hop and purr → Idle → Lap milk → Play with yarn → Walk →
   - Aquarium: Sleep (lamp off) → Joy → Idle → Feeding flakes → Treasure chest → Swim →
- 
-    
+
 - **Precision Scaling & Grounding**: Advanced programmatic padding logic ensures pets are perfectly sized and "grounded" (sitting on the path) across all widget sizes (2x2, 3x3, 4x4) and animation frames.
 - **Premium Aesthetics**: Dynamic, beautiful widget backgrounds (day/sunset scenes) using optimal `centerCrop` presentation without stretching.
 - **Interactive**: Tap the widget to interact with your pet and cycle through its actions.
@@ -41,8 +43,6 @@ Choose your companion: **Pixel Cat**  | **Pixel Dog** | **Pixel Rabbit** | **Pix
 - **Reliable**: Auto-restarts after device reboot with `RestartReceiver`
 
 ---
-
-
 
 ### Available Pets
 
@@ -74,4 +74,5 @@ phone's light or dark theme.
 | Small (2x2) | Medium (3x3) | Large (4x4) |
 |:-------------:|:-------------:|:-----------:|
 | Close-up crop | Balanced crop | Wide landscape |
+
 ---
