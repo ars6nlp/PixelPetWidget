@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Выбор фона: три нарисованные картинки и три пиксельных осенних фона, по три в ряд. Один и тот
+     же блок на главном экране и на экране смены фона у стоящего виджета (BackgroundCards). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.example.pixelpetwidget.ui.pixel.PixelLabel
+        android:id="@+id/bg_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/px_gap"
+        android:text="@string/choose_bg"
+        app:pixelText="title" />
+
+    <LinearLayout
+        android:id="@+id/bg_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.example.pixelpetwidget.ui.pixel.PixelCard
+            android:id="@+id/bg_button_1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/px_background_card"
+            android:layout_weight="1"
+            android:contentDescription="@string/bg_option_1"
+            android:padding="@dimen/px_gap">
+
+            <ImageView
+                android:id="@+id/bg_thumb_view_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:importantForAccessibility="no"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg_thumb_1" />
+        </com.example.pixelpetwidget.ui.pixel.PixelCard>
+
+        <com.example.pixelpetwidget.ui.pixel.PixelCard
+            android:id="@+id/bg_button_2"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/px_background_card"
+            android:layout_marginHorizontal="@dimen/px_gap"
+            android:layout_weight="1"
+            android:contentDescription="@string/bg_option_2"
+            android:padding="@dimen/px_gap">
+
+            <ImageView
+                android:id="@+id/bg_thumb_view_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:importantForAccessibility="no"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg_thumb_2" />
+        </com.example.pixelpetwidget.ui.pixel.PixelCard>
+
+        <com.example.pixelpetwidget.ui.pixel.PixelCard
+            android:id="@+id/bg_button_3"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/px_background_card"
+            android:layout_weight="1"
+            android:contentDescription="@string/bg_option_3"
+            android:padding="@dimen/px_gap">
+
+            <ImageView
+                android:id="@+id/bg_thumb_view_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:importantForAccessibility="no"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg_thumb_3" />
+        </com.example.pixelpetwidget.ui.pixel.PixelCard>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bg_row_autumn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_gap"
+        android:orientation="horizontal">
+
+        <com.example.pixelpetwidget.ui.pixel.PixelCard
+            android:id="@+id/bg_button_4"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/px_background_card"
+            android:layout_weight="1"
+            android:contentDescription="@string/bg_maple_park"
+            android:padding="@dimen/px_gap">
+
+            <ImageView
+                android:id="@+id/bg_thumb_view_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:importantForAccessibility="no"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg_maple_thumb" />
+        </com.example.pixelpetwidget.ui.pixel.PixelCard>
+
+        <com.example.pixelpetwidget.ui.pixel.PixelCard
+            android:id="@+id/bg_button_5"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/px_background_card"
+            android:layout_marginHorizontal="@dimen/px_gap"
+            android:layout_weight="1"
+            android:contentDescription="@string/bg_rainy_evening"
+            android:padding="@dimen/px_gap">
+
+            <ImageView
+                android:id="@+id/bg_thumb_view_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:importantForAccessibility="no"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg_rainy_thumb" />
+        </com.example.pixelpetwidget.ui.pixel.PixelCard>
+
+        <com.example.pixelpetwidget.ui.pixel.PixelCard
+            android:id="@+id/bg_button_6"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/px_background_card"
+            android:layout_weight="1"
+            android:contentDescription="@string/bg_pumpkin_field"
+            android:padding="@dimen/px_gap">
+
+            <ImageView
+                android:id="@+id/bg_thumb_view_6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:importantForAccessibility="no"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg_pumpkin_thumb" />
+        </com.example.pixelpetwidget.ui.pixel.PixelCard>
+    </LinearLayout>
+
+    <!-- Название выбранного пиксельного фона -->
+    <com.example.pixelpetwidget.ui.pixel.PixelLabel
+        android:id="@+id/bg_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_gap"
+        android:visibility="gone"
+        app:pixelText="hint" />
+</LinearLayout>

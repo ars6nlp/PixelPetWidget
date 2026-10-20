@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Смена фона у стоящего виджета (Android 12+: долгое нажатие на виджет, «Настройки»):
+     те же карточки, что в приложении, и кнопка «Закрыть». -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/picker_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.example.pixelpetwidget.ui.pixel.PixelLabel
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/px_section_gap"
+            android:text="@string/bg_picker_title"
+            app:pixelText="title" />
+
+        <com.example.pixelpetwidget.ui.pixel.PixelLabel
+            android:id="@+id/picker_scene_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bg_picker_scene"
+            android:visibility="gone"
+            app:pixelText="body" />
+
+        <include
+            android:id="@+id/bg_cards"
+            layout="@layout/part_bg_cards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.example.pixelpetwidget.ui.pixel.PixelButton
+            android:id="@+id/picker_close"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_section_gap"
+            android:text="@string/close"
+            app:pixelVariant="secondary" />
+    </LinearLayout>
+</ScrollView>

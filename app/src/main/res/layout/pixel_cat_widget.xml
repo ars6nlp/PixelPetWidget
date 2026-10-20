@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/widget_container"
+    style="@style/Widget.PixelPet.Container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/widget_frame_padding"
+    android:clickable="true"
+    android:focusable="true"
+    android:contentDescription="@string/widget_tap_hint">
+
+    <!-- Background scene - bottom layer -->
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/widget_background"
+        android:scaleType="centerCrop"
+        android:importantForAccessibility="no" />
+
+    <!-- Pixel-art background (the autumn scenes). The whole stage is scaled by a whole number from
+         its centre: sky colour behind, earth colour under the ground line, the picture at its own
+         size in the middle, and its animated props (each frame placed with its own padding) -->
+    <FrameLayout
+        android:id="@+id/bg_stage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:id="@+id/bg_earth_holder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/bg_earth"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/bg_picture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:importantForAccessibility="no" />
+
+        <FrameLayout
+            android:id="@+id/bg_props"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <!-- Seasonal decorations (pumpkins, snow) behind the pet -->
+    <ImageView
+        android:id="@+id/season_strip"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_gravity="top"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        android:importantForAccessibility="no" />
+
+    <ImageView
+        android:id="@+id/season_corner_start"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="2dp"
+        android:scaleType="fitEnd"
+        android:visibility="gone"
+        android:importantForAccessibility="no" />
+
+    <ImageView
+        android:id="@+id/season_corner_end"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="2dp"
+        android:scaleType="fitEnd"
+        android:visibility="gone"
+        android:importantForAccessibility="no" />
+
+    <!-- Pet container; its padding positions the static pet -->
+    <FrameLayout
+        android:id="@+id/pet_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Holds the flipper of the frames, new with every update (item_pet_loop) so its timer
+             starts afresh; each frame positions itself with its own padding -->
+        <FrameLayout
+            android:id="@+id/pet_frames"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <!-- Static image for the sleep state -->
+        <ImageView
+            android:id="@+id/pet_static"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/cat_sleep_frame_001"
+            android:scaleType="fitCenter"
+            android:importantForAccessibility="no" />
+
+    </FrameLayout>
+
+    <!-- The pixel-art background's front layer, scaled like bg_stage: props the pet goes behind,
+         the rain, and what its events bring (a falling leaf, raindrops) -->
+    <FrameLayout
+        android:id="@+id/bg_front"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <!-- Night mode: dims the whole scene -->
+    <ImageView
+        android:id="@+id/night_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@color/night_tint"
+        android:visibility="gone"
+        android:importantForAccessibility="no" />
+
+    <!-- What the pet would like: food or company; opens the app (description set in code) -->
+    <ImageView
+        android:id="@+id/need_bubble"
+        android:layout_width="52dp"
+        android:layout_height="46dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="6dp"
+        android:scaleType="fitCenter"
+        android:visibility="gone"
+        tools:ignore="ContentDescription" />
+
+</FrameLayout>
