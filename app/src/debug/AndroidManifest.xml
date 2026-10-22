@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Debug builds only: gallery of the pixel components, also opened by a long press on the logo;
+     a receiver that plays a widget's background interaction at once -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application>
+        <activity
+            android:name=".UiGalleryActivity"
+            android:exported="true"
+            android:label="Pixel UI gallery"
+            android:theme="@style/Theme.PixelPetWidget" />
+
+        <!-- Plays a widget's interaction with its background at once (adb broadcast); debug only,
+             so open to adb on purpose -->
+        <receiver
+            android:name=".DebugEventReceiver"
+            android:exported="true"
+            tools:ignore="ExportedReceiver" />
+    </application>
+</manifest>
