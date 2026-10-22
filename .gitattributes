@@ -1,0 +1,14 @@
+# Text files are stored with LF line endings
+* text=auto
+
+# Scripts must keep their own line endings on every system
+gradlew text eol=lf
+*.bat text eol=crlf
+
+# Binary files: never converted or diffed as text
+*.png binary
+*.webp binary
+*.gif binary
+*.wav binary
+*.ttf binary
+*.jar binary
