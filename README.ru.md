@@ -14,11 +14,9 @@
 [![License MIT](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
 [![Languages EN RU](https://img.shields.io/badge/UI-English%20%7C%20Russian-8A2BE2)](#возможности)
 
-<a href="https://play.google.com/store/apps/details?id=com.aixdev.pixelpet">
-  <img src="https://play.google.com/intl/en_us/badges/static/images/badges/ru_badge_web_generic.png" height="72" alt="Доступно в Google Play">
-</a>
+<p align="center"><a href="https://play.google.com/store/apps/details?id=com.aixdev.pixelpet"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/ru_badge_web_generic.png" height="72" alt="Доступно в Google Play"></a></p>
 
-<img src="tools/sprite_gen/output/widget_preview.png" width="600" alt="Все питомцы в саду">
+<p align="center"><img src="tools/sprite_gen/output/widget_preview.png" width="600" alt="Все питомцы в саду"></p>
 
 </div>
 
