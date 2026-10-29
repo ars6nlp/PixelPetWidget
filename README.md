@@ -1,137 +1,186 @@
-# Pixel Pet Widget
-
 <div align="center">
 
-![Android API](https://img.shields.io/badge/API-24%2B-blue.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
-![Java](https://img.shields.io/badge/Java-11-orange.svg)
-![Widget](https://img.shields.io/badge/Widget-Home%20Screen-important.svg)
+<img src="app/src/main/res/mipmap-xxxhdpi/ic_launcher_custom.png" width="96" alt="Pixel Pet icon">
 
-**Adorable animated pet widgets for Android home screens**
+# Pixel Pet
 
-Choose your companion: **Pixel Cat**  | **Pixel Dog** | **Pixel Rabbit** | **Pixel Panda** | **Pixel Hamster** | **Pixel Capybara** | **Pixel Parrot** | **Puppy** | **Kitten** | **Aquarium**
+**Cozy pixel-art pets that live on your Android home screen**
 
-[Features](#features) • [Installation](#installation) • [How it works](#how-it-works) • [Contributing](#contributing)
+**English** · [Русский](README.ru.md)
+
+[![Android 7.0+](https://img.shields.io/badge/Android-7.0%2B-3DDC84?logo=android&logoColor=white)](#requirements)
+[![Target API 36](https://img.shields.io/badge/Target%20API-36-3DDC84)](#requirements)
+[![Java 11](https://img.shields.io/badge/Java-11-ED8B00?logo=openjdk&logoColor=white)](#requirements)
+[![License MIT](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
+[![Languages EN RU](https://img.shields.io/badge/UI-English%20%7C%20Russian-8A2BE2)](#features)
+
+<a href="https://play.google.com/store/apps/details?id=com.aixdev.pixelpet">
+  <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" height="72" alt="Get it on Google Play">
+</a>
+
+<img src="tools/sprite_gen/output/widget_preview.png" width="600" alt="All the pets in the garden">
 
 </div>
 
 ---
+
+## Contents
+
+- [Features](#features)
+- [Meet the pets](#meet-the-pets)
+- [Autumn backgrounds](#autumn-backgrounds)
+- [Daily care](#daily-care)
+- [How it works](#how-it-works)
+- [Build from source](#build-from-source)
+- [Project structure](#project-structure)
+- [Requirements](#requirements)
+- [Contributing](#contributing)
+- [License](#license)
+
+---
+
 ## Features
 
-- **Multiple Pets**: Choose from Cat, Dog, Rabbit, Panda, Hamster, Capybara, Parrot, a corgi Puppy, a grey Kitten or a whole Aquarium with three goldfish - each with unique character animations!
-- **Multilingual Support**: Full localization for **English** and **Russian** languages, switched in the settings
-- **Cozy pixel interface**: one pixel-art look across the app (frames, icons, the Tiny5 font), light and warm dark
-  themes, soft chiptune sounds for buttons and pet voices. The widget itself stays silent.
-- **WebP Optimized Animations**: Upgraded from PNG to lightweight WebP sequences for drastically reduced APK size and faster rendering
-- **Battery-Friendly (Auto-Sleep)**: Active animations (walking, playing) intelligently pause
-- **Rich Animation States**:
-  - Cat: Sleep → Lick → Sit → Walk →
-  - Dog: Sleep → mouth open → Sit → Walk →
-  - Rabbit: Sleep → Eat → Walk →
-  - Panda: Sleep → Happy → Idle → Eat bamboo → Roll → Walk →
-  - Hamster: Sleep → Happy → Idle → Eat a seed → Stuff cheeks → Scurry →
-  - Capybara: Sleep → Happy → Idle → Chew grass → Warm bath with an orange → Stroll →
-  - Parrot: Sleep → Flap wings → Idle → Eat a seed → Chatter → Hop →
-  - Puppy: Sleep → Jump for joy → Idle → Chew a bone → Chase its tail → Trot →
-  - Kitten: Sleep → Hop and purr → Idle → Lap milk → Play with yarn → Walk →
-  - Aquarium: Sleep (lamp off) → Joy → Idle → Feeding flakes → Treasure chest → Swim →
-
-- **Precision Scaling & Grounding**: Advanced programmatic padding logic ensures pets are perfectly sized and "grounded" (sitting on the path) across all widget sizes (2x2, 3x3, 4x4) and animation frames.
-- **Premium Aesthetics**: Dynamic, beautiful widget backgrounds (day/sunset scenes) using optimal `centerCrop` presentation without stretching.
-- **Interactive**: Tap the widget to interact with your pet and cycle through its actions.
-- **Widget Limiter**: Hardcoded safety limit (max 5 widgets) to ensure your launcher remains butter-smooth.
-- **Reliable**: Auto-restarts after device reboot with `RestartReceiver`
+| | |
+|---|---|
+| 🐾 **10 pets** | Cat, pug, rabbit, panda, hamster, capybara, parrot, corgi puppy, grey kitten and a whole aquarium with three goldfish |
+| 🌱 **They live on their own** | A tap wakes the pet up; for about a minute it walks, eats, plays and looks around by itself, then dozes off again |
+| 🍂 **Living backgrounds** | Three animated autumn scenes, and every pet has its own little story with each of them |
+| 💛 **Gentle care** | Food and mood, a daily gift, a streak, seasonal hats. Nothing bad ever happens: no sickness, no running away |
+| 🎨 **One pixel look** | Pixel UI kit, the Tiny5 font, light and warm dark themes, soft chiptune sounds. The widget itself stays silent |
+| 🔋 **Battery-friendly** | Frames are played by the launcher. The app wakes up only when the pet changes what it does, and not at all while every pet sleeps |
+| 🌍 **Two languages** | English and Russian, switched in the settings |
 
 ---
 
-### Available Pets
+## Meet the pets
 
-| Pixel Cat | Pixel Dog | Pixel Rabbit | Pixel Panda | Pixel Hamster | Pixel Capybara | Pixel Parrot | Puppy | Kitten | Aquarium |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Sweet & cuddly | Loyal & playful | Fluffy & cute | Sleepy & chill | Quick & thrifty | Calm & friendly | Bright & chatty | Playful & kind | Curious & playful | Calm & cozy |
-| 4 actions | 4 actions | 4 actions | 6 actions | 6 actions | 6 actions | 6 actions | 6 actions | 6 actions | 6 actions |
+<table>
+  <tr>
+    <td align="center"><img src="tools/sprite_gen/output/interaction_pumpkin_cat.gif" width="260" alt="Cat"><br><b>Cat</b><br><sub>Sweet and cuddly</sub></td>
+    <td align="center"><img src="tools/sprite_gen/output/interaction_maple_dog.gif" width="260" alt="Pug"><br><b>Pug</b><br><sub>Loyal and playful</sub></td>
+    <td align="center"><img src="tools/sprite_gen/output/interaction_rainy_rabbit.gif" width="260" alt="Rabbit"><br><b>Rabbit</b><br><sub>Fluffy and cute</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="tools/sprite_gen/output/interaction_maple_panda.gif" width="260" alt="Panda"><br><b>Panda</b><br><sub>Big, sleepy and chill</sub></td>
+    <td align="center"><img src="tools/sprite_gen/output/interaction_rainy_hamster.gif" width="260" alt="Hamster"><br><b>Hamster</b><br><sub>Tiny, quick and thrifty</sub></td>
+    <td align="center"><img src="tools/sprite_gen/output/interaction_pumpkin_capybara.gif" width="260" alt="Capybara"><br><b>Capybara</b><br><sub>Big, slow and friendly</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="tools/sprite_gen/output/interaction_maple_parrot.gif" width="260" alt="Parrot"><br><b>Parrot</b><br><sub>Bright and chatty, flies</sub></td>
+    <td align="center"><img src="tools/sprite_gen/output/interaction_pumpkin_puppy.gif" width="260" alt="Corgi puppy"><br><b>Puppy</b><br><sub>A corgi that runs about</sub></td>
+    <td align="center"><img src="tools/sprite_gen/output/interaction_rainy_kitten.gif" width="260" alt="Grey kitten"><br><b>Kitten</b><br><sub>The smallest, loves yarn</sub></td>
+  </tr>
+  <tr>
+    <td align="center" colspan="3"><img src="tools/sprite_gen/output/aquarium_happy.gif" width="320" alt="Aquarium"><br><b>Aquarium</b><br><sub>A whole scene: lamp, plants, castle, treasure chest and three goldfish</sub></td>
+  </tr>
+</table>
 
-The panda, the hamster, the capybara, the parrot, the puppy (a corgi) and the kitten (a grey tabby)
-are true 64×64 pixel art drawn in code by [`tools/sprite_gen`](tools/sprite_gen/README.md) and scaled
-by whole numbers only. Their character shows in size and speed: the panda and the capybara are big
-and slow, the parrot is medium, the hamster is tiny and quick, the puppy is quick and runs about, the
-kitten is the smallest and mostly sits, washes and plays. On the three autumn backgrounds every pet
-but the aquarium has its own little scene with each of them.
+| Pet | What it does |
+|---|---|
+| Cat | Sleep · Lick · Sit · Walk |
+| Pug | Sleep · Mouth open · Sit · Walk |
+| Rabbit | Sleep · Eat · Walk |
+| Panda | Sleep · Happy · Idle · Eat bamboo · Roll · Walk |
+| Hamster | Sleep · Happy · Idle · Eat a seed · Stuff cheeks · Scurry |
+| Capybara | Sleep · Happy · Idle · Chew grass · Warm bath with an orange · Stroll |
+| Parrot | Sleep · Flap wings · Idle · Eat a seed · Chatter · Hop · Fly |
+| Puppy | Sleep · Jump for joy · Idle · Chew a bone · Chase its tail · Trot |
+| Kitten | Sleep · Hop and purr · Idle · Lap milk · Play with yarn · Walk |
+| Aquarium | Sleep (lamp off) · Joy · Idle · Feeding flakes · Treasure chest · Swim |
 
-The aquarium is a whole 128×96 pixel scene from the same generator: a tank with a lamp, plants, a
-castle, a treasure chest, an aerator and three goldfish (a slow classic, a slow veiltail and a quick
-comet) on fixed routes. It is its own background, so the widget shows it without one, at the largest
-whole-number scale that fits.
-
-### The App
-One screen: the live preview of the widget with "Add to home screen" (and "Feed" for a pet that is
-already there), the pets, the background, the wardrobe and the daily gift. The gear opens the
-settings: sound, volume, reminder, night mode, decorations, language and About. The look follows the
-phone's light or dark theme.
-
-### Widget Sizes
-
-| Small (2x2) | Medium (3x3) | Large (4x4) |
-|:-------------:|:-------------:|:-----------:|
-| Close-up crop | Balanced crop | Wide landscape |
-
----
-
-## Installation
-
-### Method 1: From Source
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/ars6nlp/PixelPetWidget.git
-   cd PixelPetWidget
-   ```
-
-2. Open in Android Studio and build the project
-3. Install on your device/emulator
-
-### Method 2: Download APK
-
-1. Download the latest APK from [Releases](https://github.com/ars6nlp/PixelPetWidget/releases)
-2. Enable "Install from unknown sources" in your device settings
-3. Open the APK file to install
+The cat, the pug and the rabbit are hand-drawn. The other pets are true 64×64 pixel art and the
+aquarium a 128×96 scene, all drawn in code by [`tools/sprite_gen`](tools/sprite_gen/README.md) and
+scaled by whole numbers only, so every pixel stays crisp. Their character shows in size and speed:
+the panda and the capybara are big and slow, the hamster is tiny and quick, the puppy runs about,
+the kitten mostly sits, washes and plays.
 
 ---
 
-##  Usage
+## Autumn backgrounds
 
-### Selecting Your Pet
+<table>
+  <tr>
+    <td align="center"><img src="tools/sprite_gen/output/bg_maple_elements.gif" width="260" alt="Maple park"><br><b>Maple park</b><br><sub>Falling leaves, a lamp, a bench</sub></td>
+    <td align="center"><img src="tools/sprite_gen/output/bg_pumpkin_elements.gif" width="260" alt="Pumpkin field"><br><b>Pumpkin field</b><br><sub>Pumpkins, hay and a scarecrow</sub></td>
+    <td align="center"><img src="tools/sprite_gen/output/bg_rainy_elements.gif" width="260" alt="Rainy evening"><br><b>Rainy evening</b><br><sub>Rain, puddles, a red umbrella</sub></td>
+  </tr>
+</table>
 
-1. **Open the Pixel Pet app** from your app drawer.
-2. **Pick a friend**: tap a pet card (tap the chosen one again and it is happy to see you).
-3. **Choose a background**.
-4. **Press "Add to home screen"** and confirm in the launcher's dialog.
-5. Language, theme and sounds are in the settings (the gear in the top-right corner).
+While a pet is awake on one of these scenes, now and then it notices something there and plays
+with it: it chases a falling leaf, hugs a pumpkin, hides under the umbrella. Every pet has its own
+interaction with every background. Besides the autumn scenes there are three painted backgrounds,
+and each widget keeps its own.
 
-### Interacting with the Widget
+---
 
-- **Tap to play**: Tap your pet to wake it up and cycle through different actions.
-- **Auto-sleep**: Let the widget be, and your pet will naturally fall asleep after 60 seconds to conserve battery.
+## Daily care
 
-### Daily Care
+| | |
+|---|---|
+| 🍖 **Food and mood** | Slowly drop over the day. A hungry pet shows a thought bubble with its favourite food, a lonely one shows a heart; tap the bubble to open the app on that pet |
+| 🤲 **Feed and stroke** | Feeding costs one treat. Stroke the pet in the app's preview; taps on the widget count as play |
+| 🎁 **Daily gift** | Treats once a day, bonuses for a streak, a streak freeze for every full week and a bow after the first one |
+| 🎩 **Wardrobe** | Bow, Halloween hat (15 Oct – 10 Nov) and Santa hat (15 Dec – 10 Jan) for the pixel-art pets. Seasonal decorations appear on every widget during those dates |
+| 🌙 **Night mode** | From 22:00 to 7:00 the widget dims and the pets go to sleep |
+| 🔔 **Reminder** | Optional, at 19:00, and only when a gift or a hungry pet is waiting |
 
-- **Food and mood** slowly drop over a day. A hungry pet shows a thought bubble with its favourite food
-  on the widget, a lonely one shows a heart; tap the bubble to open the app on that pet.
-- **Feed** costs one treat. **Stroke** the pet in the app's preview, and taps on the widget count as play.
-- **Daily gift**: treats once a day, bonuses on a streak, a streak freeze for every full week and a bow
-  after the first one.
-- **Wardrobe** (pixel-art pets): bow, Halloween hat (Oct 15 – Nov 10) and Santa hat (Dec 15 – Jan 10).
-  Seasonal decorations appear on every widget during those dates.
-- **Night mode**: from 22:00 to 7:00 the widget dims and pets go to sleep.
-- **Reminder** (optional, 19:00): only when a gift or a hungry pet is waiting.
+---
 
-Pets never get sick or run away: the care loop is meant to be cozy, not stressful.
+## How it works
 
-#### Testing seasons and night on a debug build
+```mermaid
+flowchart LR
+    tap(["Tap on the widget"]) --> widget["PixelCatWidget"]
+    widget --> behavior["PetBehavior<br/>picks the next activities"]
+    behavior --> plan["PlanFrames<br/>ViewFlippers and frames"]
+    plan --> launcher(["The launcher plays the frames"])
+    widget --> life["PetLife<br/>one inexact alarm"]
+    life -- "every 5–20 s" --> widget
+    behavior -- "after about a minute" --> sleep(["The pet falls asleep:<br/>no work at all"])
+```
+
+- **No code runs per frame.** The widget is built from `ViewFlipper`s inside `RemoteViews`, so the
+  launcher animates the pet by itself. The app runs only when the pet changes activity.
+- **One alarm for all pets.** `PetLife` sets a single ordinary inexact alarm for the next change:
+  no exact-alarm permission, no foreground service, no wake locks.
+- **A plan per update.** `PetBehavior` plans one or two activities at a time, `PlanFrames` turns
+  the plan into a tree of flippers. Pixel pets walk whole art pixels per frame in step with their
+  paws and never jump back, even if the next alarm comes late.
+- **Reproducible lives.** Each widget stores only a small session; random choices come from its
+  own seed, so the same seed always gives the same life.
+- **Care without background work.** Food and mood are stored as the moment they were full, so the
+  current level follows from the clock alone.
+- **After a reboot** `RestartReceiver` puts every pet to sleep and sets the care alarms again.
+
+---
+
+## Build from source
+
+```bash
+git clone https://github.com/ars6nlp/PixelPetWidget.git
+cd PixelPetWidget
+./gradlew assembleDebug        # app/build/outputs/apk/debug/app-debug.apk
+./gradlew testDebugUnitTest    # unit tests
+```
+
+Or open the folder in Android Studio and press **Run**.
+
+<details>
+<summary><b>Signed release build</b></summary>
+
+Copy `keystore.properties.example` to `keystore.properties` (it is ignored by git) and fill in your
+own keystore, or set `PIXELPET_STORE_FILE`, `PIXELPET_STORE_PASSWORD`, `PIXELPET_KEY_ALIAS` and
+`PIXELPET_KEY_PASSWORD`. Without them `./gradlew bundleRelease` still builds, but unsigned.
+
+</details>
+
+<details>
+<summary><b>Testing seasons and night on a debug build</b></summary>
 
 Debug builds read two overrides (release builds ignore them):
 
-```
+```bash
 adb shell am force-stop com.aixdev.pixelpet
 adb shell run-as com.aixdev.pixelpet sh -c "cat > shared_prefs/PixelPetSettings.xml" <<'EOF'
 <?xml version='1.0' encoding='utf-8' standalone='yes' ?>
@@ -143,115 +192,78 @@ EOF
 adb shell am broadcast -n com.aixdev.pixelpet/com.example.pixelpetwidget.PixelCatWidget -a com.example.pixelpetwidget.CARE_TICK
 ```
 
-### Resizing the Widget
-
-1. **Long press** on the widget
-2. **Drag the edges** to resize (from 2x2 to 4x4)
-3. The background and pet will **automatically adapt** to the new bounds beautifully.
+</details>
 
 ---
 
-## How It Works
-
-### Architecture
-
-The widget consists of smart components working together symmetrically:
-
-1. **MainActivitySimple.java** - The aesthetic Pet selection UI.
-2. **PixelCatWidget.java** - Central AppWidgetProvider containing all the scaling, padding math, and `RemoteViews` layouts.
-3. **AnimationService.java** - Foreground service executing ping-pong `ViewFlipper` logic with precise memory management, including the 60-second auto-sleep alarm.
-4. **RestartReceiver.java** - BroadcastReceiver that gracefully restores states post-reboot.
-
-### Animation System
+## Project structure
 
 ```text
-┌─────────────────────────────────────────────────────────────┐
-│  User taps widget → Toggle action (Walk/Eat/Sit)            │
-│                       ↓                                     │
-│  AnimationService updates RemoteViews via ViewFlipper       │
-│                       ↓                                     │
-│  Foreground service + WakeLock acquired                     │
-│                       ↓                                     │
-│  60 Second AlarmManager intent scheduled                    │
-│                       ↓                                     │
-│   ... time passes with beautiful 10FPS animation ...        │
-│                       ↓                                     │
-│  Alarm triggers → ACTION_FORCE_SLEEP_ALL sent               │
-│                       ↓                                     │
-│  WidgetProvider gracefully resets pets to SLEEP frames      │
-│  and releases WakeLocks to conserve battery.                │
-└─────────────────────────────────────────────────────────────┘
+app/src/main/java/com/example/pixelpetwidget/
+├── PixelCatWidget.java       the widget: turns a pet's plan into RemoteViews
+├── PetSpec.java              each pet's animations, speed, size and activities
+├── PetBehavior.java          a pet's own life after a tap
+├── PlanFrames.java           the plan as a tree of ViewFlippers and frames
+├── PetLife.java              one alarm for all awake pets
+├── FlightPath.java           the parrot's flight over the widget
+├── Backdrop.java             the autumn scenes behind the pet
+├── BackgroundEvents.java     what each pet does with each background
+├── PetCare.java              food and mood
+├── DailyRewards.java         daily gift and streak
+├── Wardrobe.java             bow and seasonal hats
+├── MainActivitySimple.java   the app's single screen
+├── ui/                       Pixel UI kit and theme (see DESIGN.md)
+└── sound/                    sounds for buttons and pet voices
+tools/sprite_gen/             Python generator of the pixel pets and backgrounds
+tools/sound_gen/              Python generator of the chiptune sounds
+tools/font/                   preparation of the Tiny5 font
+art-source/                   source art of the hand-drawn pets
 ```
 
-### Technical Details
-
-- **Asset Pipeline**: Migrated fully to `<pet>_<action>_frame_XXX.webp` files to drop app size significantly without visual loss.
-- **Frame Rate**: ~10 FPS (relaxed speed, 100ms per frame) for cozy pixel art vibes.
-- **Power Management**: `PARTIAL_WAKE_LOCK` combined with `AlarmManager` auto-sleep rules prevent infinite battery drain!
-- **State Management**: Robust `SharedPreferences` handling tracking the exact frame, layout size, and sleep state of up to 5 individual widgets.
-- **Rendering Tricks**: Custom padding multipliers and ping-pong translation offsets simulating physical space across raw `RemoteViews`.
-
----
-
-## Interface and Sounds
-
 How the app screens are built and how to change them: [`DESIGN.md`](DESIGN.md).
-
-- **Components** (`app/src/main/java/.../ui/pixel`): PixelButton, PixelCard, PixelSwitch, PixelSlider,
-  PixelDialog and PixelLabel: flat colours, a 2dp outline, cut corners.
-- **Theme**: colours and font in `ui/theme/PixelTheme.java`, sizes in `res/values/dimens.xml`.
-- **Font**: Tiny5 (SIL OFL 1.1, [`licenses/Tiny5-OFL.txt`](licenses/Tiny5-OFL.txt)), prepared by
-  `tools/font/prepare_font.py`. Text sizes snap to multiples of 8 px, where the font is crisp.
-- **Sounds**: WAV files in `res/raw`, played by `sound/SoundManager.java` on the media volume, never on
-  silent or vibrate, and never from the widget.
-- **Debug gallery**: in debug builds a long press on the logo shows every component in the light and
-  the dark theme.
 
 ---
 
 ## Requirements
 
-- **Minimum SDK**: API 24 (Android 7.0)
-- **Target SDK**: API 36 (Android 16)
-- **Language**: Java 11
+| | |
+|---|---|
+| Minimum Android | 7.0 (API 24) |
+| Target and compile SDK | 36 (Android 16) |
+| Language | Java 11 |
+| Build | Gradle wrapper included, Android Studio |
 
 ---
 
 ## Contributing
 
-Contributions are welcome! We'd love to see:
-
-- New pet types (fox, owl, fish, etc.)
-- New animations within WebP efficiency
-- Translations for other languages
-
-To contribute:
+Ideas and pull requests are welcome: new pets, new backgrounds and interactions, translations.
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+2. Create a branch: `git checkout -b feature/my-pet`
+3. Commit your changes and push the branch
+4. Open a pull request
+
+A new pet is one entry in `PetSpec.forType`; a new background is drawn in `tools/sprite_gen`,
+gets a `bg_type` in `Backdrop` and one row per pet in `BackgroundEvents`.
 
 ---
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+The source code is licensed under the [MIT License](LICENSE).
 
-The MIT License covers the source code. The sounds and the graphics (pet sprites, backgrounds,
-icons and other artwork under `app/src/main/res`, `art-source` and `tools/sprite_gen/output`) may be
-protected separately: all rights reserved unless a file says otherwise. The font Tiny5 keeps its own
-licence (SIL OFL 1.1, see [`licenses/Tiny5-OFL.txt`](licenses/Tiny5-OFL.txt)).
+The sounds and the graphics (pet sprites, backgrounds, icons and other artwork under
+`app/src/main/res`, `art-source` and `tools/sprite_gen/output`) may be protected separately: all
+rights reserved unless a file says otherwise. The font Tiny5 keeps its own licence
+(SIL OFL 1.1, see [`licenses/Tiny5-OFL.txt`](licenses/Tiny5-OFL.txt)).
 
 ---
 
-## Author
-
-**ars6nlp** - [GitHub](https://github.com/ars6nlp)
-
 <div align="center">
 
-[⭐ Star](https://github.com/ars6nlp/PixelPetWidget/stargazers) this repo if you like it!
+Made by [**ars6nlp**](https://github.com/ars6nlp)
+
+If you like the pets, give the repo a ⭐
 
 </div>
